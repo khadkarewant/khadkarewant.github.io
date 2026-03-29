@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rewant Khadka — Backend Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark:   #0F1923;
+    --accent: #1A6B3C;
+    --mid:    #4A5568;
+    --light:  #718096;
+    --rule:   #CBD5E0;
+    --bg:     #F7F8F9;
+    --white:  #ffffff;
+    --accent-bg: #EEF7F2;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'IBM Plex Sans', sans-serif; background: var(--bg); color: var(--dark); font-size: 15px; line-height: 1.6; }
+  .topbar { background: var(--dark); padding: 10px 24px; display: flex; justify-content: flex-end; gap: 12px; position: sticky; top: 0; z-index: 100; }
+  .topbar a { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: #aab; text-decoration: none; padding: 5px 12px; border: 1px solid #334; border-radius: 3px; transition: all 0.15s; }
+  .topbar a:hover { color: #fff; border-color: var(--accent); }
+  .topbar a.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .topbar a.primary:hover { background: #145530; }
+  .page { max-width: 860px; margin: 32px auto 60px; background: var(--white); box-shadow: 0 2px 24px rgba(0,0,0,0.07); padding: 48px 52px; }
+  header { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 18px; border-bottom: 2px solid var(--accent); margin-bottom: 24px; }
+  .header-left h1 { font-size: 2.1rem; font-weight: 600; letter-spacing: -0.5px; color: var(--dark); line-height: 1.15; }
+  .header-left .tagline { color: var(--mid); font-size: 0.93rem; margin-top: 5px; }
+  .header-right { text-align: right; font-family: 'IBM Plex Mono', monospace; font-size: 0.76rem; color: var(--light); line-height: 1.9; flex-shrink: 0; margin-left: 24px; }
+  .header-right a { color: var(--accent); text-decoration: none; }
+  .header-right a:hover { text-decoration: underline; }
+  section { margin-bottom: 22px; }
+  .sec-title { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 7px; }
+  .sec-rule { border: none; border-top: 1px solid var(--rule); margin-bottom: 13px; }
+  .summary { color: var(--mid); font-size: 0.9rem; line-height: 1.75; text-align: justify; }
+  .skills-grid { display: grid; grid-template-columns: 120px 1fr; gap: 5px 16px; font-size: 0.87rem; }
+  .sk { font-weight: 600; color: var(--dark); }
+  .sv { color: var(--mid); }
+  .entry { margin-bottom: 14px; }
+  .entry-title { font-weight: 600; font-size: 0.95rem; color: var(--dark); }
+  .entry-meta { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--light); margin: 3px 0 7px; }
+  .entry-meta a { color: var(--accent); text-decoration: none; }
+  .entry-meta a:hover { text-decoration: underline; }
+  .chip { display: inline-block; background: var(--accent-bg); color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; font-weight: 500; padding: 2px 7px; border-radius: 3px; margin: 0 3px 4px 0; }
+  ul.buls { list-style: none; padding: 0; }
+  ul.buls li { font-size: 0.87rem; color: var(--mid); padding-left: 14px; position: relative; margin-bottom: 4px; line-height: 1.55; }
+  ul.buls li::before { content: "▸"; color: var(--accent); position: absolute; left: 0; font-size: 0.72rem; top: 3px; }
+  .edu-entry { font-size: 0.88rem; color: var(--dark); font-weight: 600; margin-bottom: 3px; }
+  .edu-meta { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--light); margin-bottom: 10px; }
+  .cv-footer { text-align: center; margin-top: 36px; font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; color: var(--rule); }
+  @media (max-width: 640px) {
+    .page { padding: 24px 18px; margin: 0; box-shadow: none; }
+    header { flex-direction: column; gap: 14px; }
+    .header-right { text-align: left; margin-left: 0; }
+    .header-left h1 { font-size: 1.7rem; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .sk { margin-top: 4px; }
+    .topbar { justify-content: center; }
+  }
+  @media print { .topbar { display: none; } body { background: white; } .page { box-shadow: none; margin: 0; padding: 28px 36px; } }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="https://github.com/khadkarewant" target="_blank">GitHub</a>
+  <a href="https://www.linkedin.com/in/rewant-khadka-0bb5831a7/" target="_blank">LinkedIn</a>
+  <a href="rewant_khadka_cv.pdf" class="primary">Download PDF</a>
+</div>
+
+<div class="page">
+  <header>
+    <div class="header-left">
+      <h1>Rewant Khadka</h1>
+      <div class="tagline">Backend Developer &nbsp;·&nbsp; Laravel &amp; PHP &nbsp;·&nbsp; Kathmandu, Nepal</div>
+    </div>
+    <div class="header-right">
+      <a href="mailto:cto@quizmania.org">cto@quizmania.org</a><br>
+      <a href="https://github.com/khadkarewant" target="_blank">github.com/khadkarewant</a><br>
+      <a href="https://www.linkedin.com/in/rewant-khadka-0bb5831a7/" target="_blank">linkedin.com/in/rewant-khadka</a><br>
+      <a href="https://quizmania.org" target="_blank">quizmania.org</a>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-title">Summary</div>
+    <hr class="sec-rule">
+    <p class="summary">Self-taught backend developer with strong fundamentals in PHP, Laravel, and MySQL. Built and operate Quizmania, a live exam platform with 60 active users, 6,400 questions, and a 6-role access system. Domain expert in customs, tax, and revenue investigation — directly applied in Kargo, a multi-role logistics management system. Targeting a PHP/Laravel internship in Kathmandu.</p>
+  </section>
+
+  <section>
+    <div class="sec-title">Technical Skills</div>
+    <hr class="sec-rule">
+    <div class="skills-grid">
+      <span class="sk">Backend</span><span class="sv">PHP 8.2, Laravel 12, Eloquent ORM, Migrations, Middleware, MySQLi</span>
+      <span class="sk">Database</span><span class="sv">MySQL 8.0</span>
+      <span class="sk">Frontend</span><span class="sv">Blade, Tailwind CSS, Bootstrap 5, JavaScript, jQuery, Ajax, Vite</span>
+      <span class="sk">DevOps</span><span class="sv">Docker, Docker Compose</span>
+      <span class="sk">Version Control</span><span class="sv">Git, GitHub &nbsp;(main → dev → feature branch workflow)</span>
+      <span class="sk">Auth &amp; Security</span><span class="sv">Laravel Breeze, RoleMiddleware, Gates, CSRF, prepared statements, session hardening</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-title">Projects</div>
+    <hr class="sec-rule">
+
+    <div class="entry">
+      <div class="entry-title">Kargo — Customs &amp; Logistics Management System</div>
+      <div class="entry-meta">
+        <span class="chip">Laravel 12</span><span class="chip">PHP 8.2</span><span class="chip">MySQL</span><span class="chip">Docker</span><span class="chip">Tailwind</span>
+        &nbsp;<a href="https://github.com/khadkarewant/kargo-laravel" target="_blank">github.com/khadkarewant/kargo-laravel</a>
+      </div>
+      <ul class="buls">
+        <li>Three-role system (Customer, Employee, Manager) with isolated route prefixes and RoleMiddleware</li>
+        <li>Direction-aware tracking engine (inbound/outbound) with sequential step enforcement and auto-generated Tracking IDs</li>
+        <li>Full audit trail via activity_logs; in-app notification service firing on all workflow transitions</li>
+        <li>Test suite covering auth, CRUD, role access, workflow transitions, and notification dispatch</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title">Quizmania — Live MCQ Exam Platform</div>
+      <div class="entry-meta">
+        <span class="chip">PHP 8.2</span><span class="chip">MySQLi</span><span class="chip">Bootstrap 5</span><span class="chip">jQuery</span><span class="chip">Ajax</span>
+        &nbsp;<a href="https://quizmania.org" target="_blank">quizmania.org</a> &nbsp;·&nbsp; Live, owner-operated
+      </div>
+      <ul class="buls">
+        <li>60 active users, 6,400 questions — built, deployed, and operated solo with no framework</li>
+        <li>6-role access system: admin, teacher, data_entry, agent, biller, student</li>
+        <li>Security: CSRF tokens, prepared statements, single-device session enforcement, login throttling</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-title">Professional Experience</div>
+    <hr class="sec-rule">
+
+    <div class="entry">
+      <div class="entry-title">Independent Software Developer</div>
+      <div class="entry-meta">Self-employed &nbsp;·&nbsp; May 2023 – Present</div>
+      <ul class="buls">
+        <li>Built and launched Quizmania and Kargo — both live or demo-ready, operated and maintained solo</li>
+        <li>Intensive self-directed study in PHP, MySQL, Laravel, Docker, and Git through project-based learning</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title">Customs Inspector</div>
+      <div class="entry-meta">Tribhuvan International Airport Customs Office, Kathmandu &nbsp;·&nbsp; Oct 2021 – May 2023</div>
+      <ul class="buls">
+        <li>Cleared international cargo and baggage; applied customs tariff classification and trade compliance</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title">Field Investigator — Revenue Investigation</div>
+      <div class="entry-meta">Revenue Investigation Office, Kohalpur &nbsp;·&nbsp; Nov 2019 – Oct 2021</div>
+      <ul class="buls">
+        <li>Conducted field investigations and audits into tax evasion; prepared reports for legal proceedings</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title">Non-Gazetted First Class Officer</div>
+      <div class="entry-meta">Inland Revenue Office, Nepalgunj — Service, Collection &amp; Excise &nbsp;·&nbsp; Nov 2016 – Nov 2019</div>
+      <ul class="buls">
+        <li>Managed tax collection, excise duties, and taxpayer services across multiple sections</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-title">Education</div>
+    <hr class="sec-rule">
+    <div class="edu-entry">Bachelor's Degree in Business Studies (BBS) — Management</div>
+    <div class="edu-meta">Mahendra Multiple Campus, Nepalgunj &nbsp;·&nbsp; Tribhuvan University &nbsp;·&nbsp; 2018 &nbsp;·&nbsp; 58.05%</div>
+    <div class="edu-entry">+2 Science (Computer Science)</div>
+    <div class="edu-meta">Eager Bridge Boarding H.S. School, Surkhet &nbsp;·&nbsp; HSEB Nepal &nbsp;·&nbsp; 2014 &nbsp;·&nbsp; 76.5% — Distinction</div>
+  </section>
+
+  <div class="cv-footer">khadkarewant.github.io &nbsp;·&nbsp; last updated March 2026</div>
+</div>
+</body>
+</html>
